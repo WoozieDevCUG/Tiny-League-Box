@@ -1,0 +1,13 @@
+release/main.o
+release/widget.o
+release/userbadgewidget.o
+release/authdialog.o
+release/herocardwidget.o
+release/avatarwidget.o
+release/httpclient.o
+release/moc_widget.o
+release/moc_userbadgewidget.o
+release/moc_authdialog.o
+release/moc_herocardwidget.o
+release/moc_avatarwidget.o
+release/moc_httpclient.o

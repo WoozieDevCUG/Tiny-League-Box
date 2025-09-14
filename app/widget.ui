@@ -1,0 +1,856 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<ui version="4.0">
+ <class>Widget</class>
+ <widget class="QWidget" name="Widget">
+  <property name="geometry">
+   <rect>
+    <x>0</x>
+    <y>0</y>
+    <width>1200</width>
+    <height>720</height>
+   </rect>
+  </property>
+  <property name="minimumSize">
+   <size>
+    <width>1200</width>
+    <height>720</height>
+   </size>
+  </property>
+  <property name="maximumSize">
+   <size>
+    <width>1200</width>
+    <height>720</height>
+   </size>
+  </property>
+  <property name="windowTitle">
+   <string>电竞数据助手</string>
+  </property>
+  <property name="styleSheet">
+   <string notr="true">QWidget#Widget { background: #0a0e13; }</string>
+  </property>
+  <layout class="QVBoxLayout" name="verticalLayout_Main">
+   <property name="spacing">
+    <number>0</number>
+   </property>
+   <property name="margin">
+    <number>0</number>
+   </property>
+   <item>
+    <layout class="QHBoxLayout" name="horizontalLayout_TopBar">
+     <property name="leftMargin">
+      <number>16</number>
+     </property>
+     <property name="topMargin">
+      <number>12</number>
+     </property>
+     <property name="rightMargin">
+      <number>16</number>
+     </property>
+     <property name="bottomMargin">
+      <number>12</number>
+     </property>
+     <item>
+      <widget class="QLabel" name="labelTitle">
+       <property name="text">
+        <string>电竞数据助手</string>
+       </property>
+       <property name="styleSheet">
+        <string notr="true">font-size: 20px; font-weight: bold; color: #00d4ff;</string>
+       </property>
+      </widget>
+     </item>
+     <item>
+      <spacer name="horizontalSpacer">
+       <property name="orientation">
+        <enum>Qt::Horizontal</enum>
+       </property>
+       <property name="sizeHint" stdset="0">
+        <size>
+         <width>40</width>
+         <height>20</height>
+        </size>
+       </property>
+      </spacer>
+     </item>
+     <item>
+      <widget class="UserBadgeWidget" name="userBadge"/>
+     </item>
+    </layout>
+   </item>
+   <item>
+    <widget class="QStackedWidget" name="stackedMain">
+     <property name="currentIndex">
+      <number>0</number>
+     </property>
+     <widget class="QWidget" name="pageHome">
+      <property name="styleSheet">
+       <string notr="true">QWidget { background: #0a0e13; }</string>
+      </property>
+      <layout class="QVBoxLayout" name="verticalLayout_Home">
+       <item>
+        <spacer name="verticalSpacer_home_top">
+         <property name="orientation">
+          <enum>Qt::Vertical</enum>
+         </property>
+         <property name="sizeType">
+          <enum>QSizePolicy::Expanding</enum>
+         </property>
+         <property name="sizeHint" stdset="0">
+          <size>
+           <width>20</width>
+           <height>40</height>
+          </size>
+         </property>
+        </spacer>
+       </item>
+       <item>
+        <layout class="QGridLayout" name="gridLayout_HomeButtons">
+         <property name="horizontalSpacing">
+          <number>32</number>
+         </property>
+         <property name="verticalSpacing">
+          <number>24</number>
+         </property>
+         <property name="leftMargin">
+          <number>160</number>
+         </property>
+         <property name="topMargin">
+          <number>0</number>
+         </property>
+         <property name="rightMargin">
+          <number>160</number>
+         </property>
+         <property name="bottomMargin">
+          <number>0</number>
+         </property>
+         <item row="0" column="0">
+          <widget class="QPushButton" name="btnData">
+           <property name="minimumSize">
+            <size>
+             <width>240</width>
+             <height>140</height>
+            </size>
+           </property>
+           <property name="text">
+            <string>资料</string>
+           </property>
+           <property name="styleSheet">
+            <string notr="true">QPushButton {
+              font-size: 22px; 
+              font-weight: bold; 
+              color: #ffffff; 
+              background: qlineargradient(x1:0, y1:0, x2:1, y2:1, stop:0 #667eea, stop:1 #764ba2); 
+              border: 2px solid #667eea; 
+              border-radius: 12px;
+            }
+            QPushButton:hover {
+              background: qlineargradient(x1:0, y1:0, x2:1, y2:1, stop:0 #764ba2, stop:1 #667eea); 
+              border-color: #00d4ff;
+              transform: translateY(-2px);
+            }
+            QPushButton:pressed {
+              background: qlineargradient(x1:0, y1:0, x2:1, y2:1, stop:0 #5a67d8, stop:1 #553c9a);
+            }</string>
+           </property>
+          </widget>
+         </item>
+         <item row="0" column="1">
+          <widget class="QPushButton" name="btnNews">
+           <property name="minimumSize">
+            <size>
+             <width>240</width>
+             <height>140</height>
+            </size>
+           </property>
+           <property name="text">
+            <string>资讯</string>
+           </property>
+           <property name="styleSheet">
+            <string notr="true">QPushButton {
+              font-size: 22px; 
+              font-weight: bold; 
+              color: #ffffff; 
+              background: qlineargradient(x1:0, y1:0, x2:1, y2:1, stop:0 #f093fb, stop:1 #f5576c); 
+              border: 2px solid #f093fb; 
+              border-radius: 12px;
+            }
+            QPushButton:hover {
+              background: qlineargradient(x1:0, y1:0, x2:1, y2:1, stop:0 #f5576c, stop:1 #f093fb); 
+              border-color: #00d4ff;
+            }
+            QPushButton:pressed {
+              background: qlineargradient(x1:0, y1:0, x2:1, y2:1, stop:0 #e53e3e, stop:1 #d53f8c);
+            }</string>
+           </property>
+          </widget>
+         </item>
+         <item row="1" column="0">
+          <widget class="QPushButton" name="btnGuides">
+           <property name="minimumSize">
+            <size>
+             <width>240</width>
+             <height>140</height>
+            </size>
+           </property>
+           <property name="text">
+            <string>攻略</string>
+           </property>
+           <property name="styleSheet">
+            <string notr="true">QPushButton {
+              font-size: 22px; 
+              font-weight: bold; 
+              color: #ffffff; 
+              background: qlineargradient(x1:0, y1:0, x2:1, y2:1, stop:0 #4facfe, stop:1 #00f2fe); 
+              border: 2px solid #4facfe; 
+              border-radius: 12px;
+            }
+            QPushButton:hover {
+              background: qlineargradient(x1:0, y1:0, x2:1, y2:1, stop:0 #00f2fe, stop:1 #4facfe); 
+              border-color: #00d4ff;
+            }
+            QPushButton:pressed {
+              background: qlineargradient(x1:0, y1:0, x2:1, y2:1, stop:0 #0ea5e9, stop:1 #06b6d4);
+            }</string>
+           </property>
+          </widget>
+         </item>
+         <item row="1" column="1">
+          <widget class="QPushButton" name="btnInteract">
+           <property name="minimumSize">
+            <size>
+             <width>240</width>
+             <height>140</height>
+            </size>
+           </property>
+           <property name="text">
+            <string>互动</string>
+           </property>
+           <property name="styleSheet">
+            <string notr="true">QPushButton {
+              font-size: 22px; 
+              font-weight: bold; 
+              color: #ffffff; 
+              background: qlineargradient(x1:0, y1:0, x2:1, y2:1, stop:0 #fa709a, stop:1 #fee140); 
+              border: 2px solid #fa709a; 
+              border-radius: 12px;
+            }
+            QPushButton:hover {
+              background: qlineargradient(x1:0, y1:0, x2:1, y2:1, stop:0 #fee140, stop:1 #fa709a); 
+              border-color: #00d4ff;
+            }
+            QPushButton:pressed {
+              background: qlineargradient(x1:0, y1:0, x2:1, y2:1, stop:0 #f59e0b, stop:1 #ef4444);
+            }</string>
+           </property>
+          </widget>
+         </item>
+        </layout>
+       </item>
+       <item>
+        <spacer name="verticalSpacer_home_bottom">
+         <property name="orientation">
+          <enum>Qt::Vertical</enum>
+         </property>
+         <property name="sizeType">
+          <enum>QSizePolicy::Expanding</enum>
+         </property>
+         <property name="sizeHint" stdset="0">
+          <size>
+           <width>20</width>
+           <height>40</height>
+          </size>
+         </property>
+        </spacer>
+       </item>
+      </layout>
+     </widget>
+     <widget class="QWidget" name="pageData">
+      <layout class="QVBoxLayout" name="verticalLayout_Data">
+       <property name="leftMargin">
+        <number>0</number>
+       </property>
+       <property name="topMargin">
+        <number>0</number>
+       </property>
+       <property name="rightMargin">
+        <number>0</number>
+       </property>
+       <property name="bottomMargin">
+        <number>0</number>
+       </property>
+       <item>
+        <!-- 顶部标签栏区域 -->
+        <widget class="QWidget" name="widgetDataTabsContainer">
+         <property name="minimumHeight">
+          <number>80</number>
+         </property>
+         <property name="maximumHeight">
+          <number>80</number>
+         </property>
+         <property name="styleSheet">
+          <string notr="true">QWidget#widgetDataTabsContainer { background: qlineargradient(x1:0, y1:0, x2:0, y2:1, stop:0 #0f1419, stop:1 #1e2328); border-bottom: 2px solid #00d4ff; }</string>
+         </property>
+         <layout class="QHBoxLayout" name="horizontalLayout_DataTabsContainer">
+          <property name="leftMargin">
+           <number>0</number>
+          </property>
+          <property name="topMargin">
+           <number>0</number>
+          </property>
+          <property name="rightMargin">
+           <number>0</number>
+          </property>
+          <property name="bottomMargin">
+           <number>0</number>
+          </property>
+          <item>
+           <spacer name="horizontalSpacer_left">
+            <property name="orientation">
+             <enum>Qt::Horizontal</enum>
+            </property>
+            <property name="sizeHint" stdset="0">
+             <size>
+              <width>40</width>
+              <height>20</height>
+             </size>
+            </property>
+           </spacer>
+          </item>
+          <item>
+           <layout class="QHBoxLayout" name="horizontalLayout_DataTabs">
+            <property name="spacing">
+             <number>2</number>
+            </property>
+            <item>
+             <widget class="QPushButton" name="btnTabHeroes">
+              <property name="minimumSize">
+               <size>
+                <width>120</width>
+                <height>50</height>
+               </size>
+              </property>
+              <property name="text">
+               <string>英雄</string>
+              </property>
+              <property name="styleSheet">
+               <string notr="true">QPushButton { 
+                 font-size: 16px; 
+                 font-weight: bold; 
+                 color: #8892b0; 
+                 background: transparent; 
+                 border: none; 
+                 border-bottom: 3px solid transparent; 
+                 padding: 12px 24px; 
+               }
+               QPushButton:checked { 
+                 color: #00d4ff; 
+                 border-bottom: 3px solid #00d4ff; 
+                 background: qlineargradient(x1:0, y1:0, x2:0, y2:1, stop:0 rgba(0,212,255,0.1), stop:1 transparent); 
+               }
+               QPushButton:hover:!checked { 
+                 color: #ccd6f6; 
+                 background: qlineargradient(x1:0, y1:0, x2:0, y2:1, stop:0 rgba(255,255,255,0.05), stop:1 transparent); 
+               }</string>
+              </property>
+              <property name="checkable">
+               <bool>true</bool>
+              </property>
+              <property name="checked">
+               <bool>true</bool>
+              </property>
+             </widget>
+            </item>
+            <item>
+             <widget class="QPushButton" name="btnTabItems">
+              <property name="minimumSize">
+               <size>
+                <width>120</width>
+                <height>50</height>
+               </size>
+              </property>
+              <property name="text">
+               <string>装备</string>
+              </property>
+              <property name="styleSheet">
+               <string notr="true">QPushButton { 
+                 font-size: 16px; 
+                 font-weight: bold; 
+                 color: #8892b0; 
+                 background: transparent; 
+                 border: none; 
+                 border-bottom: 3px solid transparent; 
+                 padding: 12px 24px; 
+               }
+               QPushButton:checked { 
+                 color: #00d4ff; 
+                 border-bottom: 3px solid #00d4ff; 
+                 background: qlineargradient(x1:0, y1:0, x2:0, y2:1, stop:0 rgba(0,212,255,0.1), stop:1 transparent); 
+               }
+               QPushButton:hover:!checked { 
+                 color: #ccd6f6; 
+                 background: qlineargradient(x1:0, y1:0, x2:0, y2:1, stop:0 rgba(255,255,255,0.05), stop:1 transparent); 
+               }</string>
+              </property>
+              <property name="checkable">
+               <bool>true</bool>
+              </property>
+             </widget>
+            </item>
+            <item>
+             <widget class="QPushButton" name="btnTabRunes">
+              <property name="minimumSize">
+               <size>
+                <width>120</width>
+                <height>50</height>
+               </size>
+              </property>
+              <property name="text">
+               <string>符文</string>
+              </property>
+              <property name="styleSheet">
+               <string notr="true">QPushButton { 
+                 font-size: 16px; 
+                 font-weight: bold; 
+                 color: #8892b0; 
+                 background: transparent; 
+                 border: none; 
+                 border-bottom: 3px solid transparent; 
+                 padding: 12px 24px; 
+               }
+               QPushButton:checked { 
+                 color: #00d4ff; 
+                 border-bottom: 3px solid #00d4ff; 
+                 background: qlineargradient(x1:0, y1:0, x2:0, y2:1, stop:0 rgba(0,212,255,0.1), stop:1 transparent); 
+               }
+               QPushButton:hover:!checked { 
+                 color: #ccd6f6; 
+                 background: qlineargradient(x1:0, y1:0, x2:0, y2:1, stop:0 rgba(255,255,255,0.05), stop:1 transparent); 
+               }</string>
+              </property>
+              <property name="checkable">
+               <bool>true</bool>
+              </property>
+             </widget>
+            </item>
+           </layout>
+          </item>
+          <item>
+           <spacer name="horizontalSpacer_right">
+            <property name="orientation">
+             <enum>Qt::Horizontal</enum>
+            </property>
+            <property name="sizeHint" stdset="0">
+             <size>
+              <width>40</width>
+              <height>20</height>
+             </size>
+            </property>
+           </spacer>
+          </item>
+         </layout>
+        </widget>
+       </item>
+       <item>
+        <widget class="QStackedWidget" name="stackedData">
+         <property name="currentIndex">
+          <number>0</number>
+         </property>
+         <property name="styleSheet">
+          <string notr="true">QStackedWidget { background: #0a0e13; }</string>
+         </property>
+         <widget class="QWidget" name="pageHeroes">
+          <layout class="QVBoxLayout" name="verticalLayout_Heroes">
+           <property name="leftMargin">
+            <number>0</number>
+           </property>
+           <property name="topMargin">
+            <number>0</number>
+           </property>
+           <property name="rightMargin">
+            <number>0</number>
+           </property>
+           <property name="bottomMargin">
+            <number>0</number>
+           </property>
+           <item>
+            <!-- 英雄页面头部筛选区域 -->
+            <widget class="QWidget" name="widgetHeroesHeader">
+             <property name="minimumHeight">
+              <number>60</number>
+             </property>
+             <property name="maximumHeight">
+              <number>60</number>
+             </property>
+             <property name="styleSheet">
+              <string notr="true">QWidget#widgetHeroesHeader { background: #1e2328; border-bottom: 1px solid #3c4043; }</string>
+             </property>
+             <layout class="QHBoxLayout" name="horizontalLayout_HeroesHeader">
+              <property name="leftMargin">
+               <number>24</number>
+              </property>
+              <property name="topMargin">
+               <number>12</number>
+              </property>
+              <property name="rightMargin">
+               <number>24</number>
+              </property>
+              <property name="bottomMargin">
+               <number>12</number>
+              </property>
+              <item>
+               <widget class="QLabel" name="labelHeroesTitle">
+                <property name="text">
+                 <string>英雄数据库</string>
+                </property>
+                <property name="styleSheet">
+                 <string notr="true">font-size: 18px; font-weight: bold; color: #ccd6f6;</string>
+                </property>
+               </widget>
+              </item>
+              <item>
+               <spacer name="horizontalSpacer3">
+                <property name="orientation">
+                 <enum>Qt::Horizontal</enum>
+                </property>
+                <property name="sizeHint" stdset="0">
+                 <size>
+                  <width>40</width>
+                  <height>20</height>
+                 </size>
+                </property>
+               </spacer>
+              </item>
+              <item>
+               <widget class="QComboBox" name="comboFilterType">
+                <property name="minimumSize">
+                 <size>
+                  <width>140</width>
+                  <height>36</height>
+                 </size>
+                </property>
+                <property name="currentIndex">
+                 <number>0</number>
+                </property>
+                <property name="styleSheet">
+                 <string notr="true">QComboBox {
+                   font-size: 14px;
+                   color: #ccd6f6;
+                   background: #2d3748;
+                   border: 2px solid #4a5568;
+                   border-radius: 6px;
+                   padding: 6px 12px;
+                   min-width: 120px;
+                 }
+                 QComboBox:hover {
+                   border-color: #00d4ff;
+                   background: #374151;
+                 }
+                 QComboBox:focus {
+                   border-color: #00d4ff;
+                   background: #374151;
+                 }
+                 QComboBox::drop-down {
+                   border: none;
+                   width: 20px;
+                 }
+                 QComboBox::down-arrow {
+                   image: none;
+                   border-left: 5px solid transparent;
+                   border-right: 5px solid transparent;
+                   border-top: 5px solid #00d4ff;
+                   margin-right: 5px;
+                 }
+                 QComboBox QAbstractItemView {
+                   background: #2d3748;
+                   border: 2px solid #00d4ff;
+                   border-radius: 6px;
+                   color: #ccd6f6;
+                   selection-background-color: #00d4ff;
+                   selection-color: #0a0e13;
+                   outline: none;
+                 }</string>
+                </property>
+                <item>
+                 <property name="text">
+                  <string>显示所有</string>
+                 </property>
+                </item>
+                <item>
+                 <property name="text">
+                  <string>路线定位</string>
+                 </property>
+                </item>
+                <item>
+                 <property name="text">
+                  <string>功能定位</string>
+                 </property>
+                </item>
+               </widget>
+              </item>
+              <item>
+               <widget class="QComboBox" name="comboFilterValue">
+                <property name="minimumSize">
+                 <size>
+                  <width>140</width>
+                  <height>36</height>
+                 </size>
+                </property>
+                <property name="enabled">
+                 <bool>false</bool>
+                </property>
+                <property name="styleSheet">
+                 <string notr="true">QComboBox {
+                   font-size: 14px;
+                   color: #ccd6f6;
+                   background: #2d3748;
+                   border: 2px solid #4a5568;
+                   border-radius: 6px;
+                   padding: 6px 12px;
+                   min-width: 120px;
+                 }
+                 QComboBox:hover {
+                   border-color: #00d4ff;
+                   background: #374151;
+                 }
+                 QComboBox:focus {
+                   border-color: #00d4ff;
+                   background: #374151;
+                 }
+                 QComboBox:disabled {
+                   background: #1a1d23;
+                   color: #4a5568;
+                   border-color: #2d3748;
+                 }
+                 QComboBox::drop-down {
+                   border: none;
+                   width: 20px;
+                 }
+                 QComboBox::down-arrow {
+                   image: none;
+                   border-left: 5px solid transparent;
+                   border-right: 5px solid transparent;
+                   border-top: 5px solid #00d4ff;
+                   margin-right: 5px;
+                 }
+                 QComboBox::down-arrow:disabled {
+                   border-top-color: #4a5568;
+                 }
+                 QComboBox QAbstractItemView {
+                   background: #2d3748;
+                   border: 2px solid #00d4ff;
+                   border-radius: 6px;
+                   color: #ccd6f6;
+                   selection-background-color: #00d4ff;
+                   selection-color: #0a0e13;
+                   outline: none;
+                 }</string>
+                </property>
+                <item>
+                 <property name="text">
+                  <string>上单</string>
+                 </property>
+                </item>
+                <item>
+                 <property name="text">
+                  <string>中单</string>
+                 </property>
+                </item>
+                <item>
+                 <property name="text">
+                  <string>下路</string>
+                 </property>
+                </item>
+                <item>
+                 <property name="text">
+                  <string>打野</string>
+                 </property>
+                </item>
+                <item>
+                 <property name="text">
+                  <string>辅助</string>
+                 </property>
+                </item>
+               </widget>
+              </item>
+             </layout>
+            </widget>
+           </item>
+           <item>
+            <widget class="QScrollArea" name="scrollHeroes">
+             <property name="widgetResizable">
+              <bool>true</bool>
+             </property>
+             <property name="styleSheet">
+              <string notr="true">QScrollArea {
+                background: #0a0e13;
+                border: none;
+              }
+              QScrollBar:vertical {
+                background: #1e2328;
+                width: 12px;
+                border-radius: 6px;
+              }
+              QScrollBar::handle:vertical {
+                background: #4a5568;
+                border-radius: 6px;
+                min-height: 20px;
+              }
+              QScrollBar::handle:vertical:hover {
+                background: #00d4ff;
+              }
+              QScrollBar::add-line:vertical, QScrollBar::sub-line:vertical {
+                height: 0px;
+              }</string>
+             </property>
+             <widget class="QWidget" name="scrollAreaWidgetContents">
+              <property name="styleSheet">
+               <string notr="true">QWidget { background: #0a0e13; }</string>
+              </property>
+              <layout class="QGridLayout" name="gridHeroes">
+               <property name="horizontalSpacing">
+                <number>20</number>
+               </property>
+               <property name="verticalSpacing">
+                <number>20</number>
+               </property>
+               <property name="leftMargin">
+                <number>24</number>
+               </property>
+               <property name="topMargin">
+                <number>24</number>
+               </property>
+               <property name="rightMargin">
+                <number>24</number>
+               </property>
+               <property name="bottomMargin">
+                <number>24</number>
+               </property>
+              </layout>
+             </widget>
+            </widget>
+           </item>
+          </layout>
+         </widget>
+         <widget class="QWidget" name="pageItems">
+          <property name="styleSheet">
+           <string notr="true">QWidget { background: #0a0e13; }</string>
+          </property>
+          <layout class="QVBoxLayout" name="verticalLayout_Items">
+           <item>
+            <widget class="QLabel" name="labelItems">
+             <property name="text">
+              <string>装备内容即将上线</string>
+             </property>
+             <property name="alignment">
+              <set>Qt::AlignHCenter|Qt::AlignVCenter</set>
+             </property>
+             <property name="styleSheet">
+              <string notr="true">font-size: 18px; color: #8892b0;</string>
+             </property>
+            </widget>
+           </item>
+          </layout>
+         </widget>
+         <widget class="QWidget" name="pageRunes">
+          <property name="styleSheet">
+           <string notr="true">QWidget { background: #0a0e13; }</string>
+          </property>
+          <layout class="QVBoxLayout" name="verticalLayout_Runes">
+           <item>
+            <widget class="QLabel" name="labelRunes">
+             <property name="text">
+              <string>符文内容即将上线</string>
+             </property>
+             <property name="alignment">
+              <set>Qt::AlignHCenter|Qt::AlignVCenter</set>
+             </property>
+             <property name="styleSheet">
+              <string notr="true">font-size: 18px; color: #8892b0;</string>
+             </property>
+            </widget>
+           </item>
+          </layout>
+         </widget>
+        </widget>
+       </item>
+      </layout>
+     </widget>
+     <widget class="QWidget" name="pageNews">
+      <property name="styleSheet">
+       <string notr="true">QWidget { background: #0a0e13; }</string>
+      </property>
+      <layout class="QVBoxLayout" name="verticalLayout_News">
+       <item>
+        <widget class="QLabel" name="labelNews">
+         <property name="text">
+          <string>资讯页面（占位）</string>
+         </property>
+         <property name="alignment">
+          <set>Qt::AlignCenter</set>
+         </property>
+         <property name="styleSheet">
+          <string notr="true">font-size: 18px; color: #8892b0;</string>
+         </property>
+        </widget>
+       </item>
+      </layout>
+     </widget>
+     <widget class="QWidget" name="pageGuides">
+      <property name="styleSheet">
+       <string notr="true">QWidget { background: #0a0e13; }</string>
+      </property>
+      <layout class="QVBoxLayout" name="verticalLayout_Guides">
+       <item>
+        <widget class="QLabel" name="labelGuides">
+         <property name="text">
+          <string>攻略页面（占位）</string>
+         </property>
+         <property name="alignment">
+          <set>Qt::AlignCenter</set>
+         </property>
+         <property name="styleSheet">
+          <string notr="true">font-size: 18px; color: #8892b0;</string>
+         </property>
+        </widget>
+       </item>
+      </layout>
+     </widget>
+     <widget class="QWidget" name="pageInteract">
+      <property name="styleSheet">
+       <string notr="true">QWidget { background: #0a0e13; }</string>
+      </property>
+      <layout class="QVBoxLayout" name="verticalLayout_Interact">
+       <item>
+        <widget class="QLabel" name="labelInteract">
+         <property name="text">
+          <string>互动页面（占位）</string>
+         </property>
+         <property name="alignment">
+          <set>Qt::AlignCenter</set>
+         </property>
+         <property name="styleSheet">
+          <string notr="true">font-size: 18px; color: #8892b0;</string>
+         </property>
+        </widget>
+       </item>
+      </layout>
+     </widget>
+    </widget>
+   </item>
+  </layout>
+ </widget>
+ <customwidgets>
+  <customwidget>
+   <class>UserBadgeWidget</class>
+   <extends>QWidget</extends>
+   <header>components/userbadgewidget.h</header>
+  </customwidget>
+  <customwidget>
+   <class>HeroCardWidget</class>
+   <extends>QWidget</extends>
+   <header>components/herocardwidget.h</header>
+  </customwidget>
+ </customwidgets>
+ <resources/>
+ <connections/>
+</ui>

@@ -1,0 +1,13 @@
+debug/main.o
+debug/widget.o
+debug/userbadgewidget.o
+debug/authdialog.o
+debug/herocardwidget.o
+debug/avatarwidget.o
+debug/httpclient.o
+debug/moc_widget.o
+debug/moc_userbadgewidget.o
+debug/moc_authdialog.o
+debug/moc_herocardwidget.o
+debug/moc_avatarwidget.o
+debug/moc_httpclient.o
